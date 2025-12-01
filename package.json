@@ -1,0 +1,27 @@
+{
+  "name": "shoresquad",
+  "version": "1.0.0",
+  "description": "Rally your crew, track weather, and hit the next beach cleanup with our dope map app!",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=5500",
+    "build": "echo 'Build script pending'",
+    "test": "echo 'Test script pending'"
+  },
+  "keywords": [
+    "beach",
+    "cleanup",
+    "environmental",
+    "social",
+    "map",
+    "weather"
+  ],
+  "author": "ShoreSquad Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}

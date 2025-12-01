@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShoreSquad - Rally your crew, track weather, and hit the next beach cleanup">
+    <meta name="theme-color" content="#0077BE">
+    <title>ShoreSquad - Beach Cleanup Made Social</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Leaflet Map Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="main">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🌊 ShoreSquad</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#map-section">Map</a></li>
+                <li><a href="#events-section">Events</a></li>
+                <li><a href="#weather-section">Weather</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#" class="btn-cta">Join Crew</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Rally Your Crew</h2>
+            <p>Track weather, plan cleanups, and make a real impact on our beaches</p>
+            <button class="btn btn-primary" id="getStartedBtn">Get Started</button>
+        </div>
+        <div class="hero-wave"></div>
+    </header>
+
+    <!-- Map Section -->
+    <section id="map-section" class="section">
+        <div class="container">
+            <h2>Find Beach Cleanups Near You</h2>
+            <div class="map-container" id="mapContainer" role="region" aria-label="Interactive map of beach cleanup events">
+                <div id="map" style="height: 500px; border-radius: 12px;"></div>
+            </div>
+            <div class="map-info">
+                <p><strong>💡 Tip:</strong> Click on markers to see event details and weather conditions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events-section" class="section section-alt">
+        <div class="container">
+            <h2>Upcoming Beach Cleanups</h2>
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search events..." aria-label="Search beach cleanup events">
+                <select id="difficultyFilter" aria-label="Filter by difficulty level">
+                    <option value="">All Difficulty Levels</option>
+                    <option value="easy">Easy</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="challenging">Challenging</option>
+                </select>
+            </div>
+            <div class="events-grid" id="eventsContainer" role="region" aria-label="List of upcoming beach cleanup events">
+                <!-- Events dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather-section" class="section">
+        <div class="container">
+            <h2>Real-Time Weather Tracking</h2>
+            <div class="weather-container">
+                <button class="btn btn-secondary" id="weatherBtn">Get My Weather</button>
+                <div id="weatherInfo" class="weather-info hidden" role="region" aria-label="Current weather information">
+                    <div class="weather-card">
+                        <h3 id="weatherLocation">Loading...</h3>
+                        <p id="weatherDesc"></p>
+                        <p id="weatherTemp"></p>
+                        <p id="weatherWind"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="section section-alt">
+        <div class="container">
+            <h2>About ShoreSquad</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>🌍 Environmental Impact</h3>
+                    <p>Join thousands mobilizing for ocean conservation and beach preservation</p>
+                </div>
+                <div class="about-card">
+                    <h3>👥 Community Driven</h3>
+                    <p>Rally your crew with friends and meet like-minded eco-warriors</p>
+                </div>
+                <div class="about-card">
+                    <h3>🗺️ Smart Planning</h3>
+                    <p>Real-time weather and interactive maps for perfect cleanup days</p>
+                </div>
+                <div class="about-card">
+                    <h3>🚀 Easy & Fun</h3>
+                    <p>Social features make environmental action engaging and rewarding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ShoreSquad. Making beaches cleaner, one crew at a time. 🌊</p>
+            <div class="social-links">
+                <a href="#" aria-label="Follow on Instagram">Instagram</a>
+                <a href="#" aria-label="Follow on Twitter">Twitter</a>
+                <a href="#" aria-label="Join our Discord">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>

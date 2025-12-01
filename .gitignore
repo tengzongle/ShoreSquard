@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build files
+dist/
+build/
+*.bundle.js
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Testing
+coverage/
+.nyc_output/
